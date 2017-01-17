@@ -1,10 +1,30 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>About me</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 </head>
 <body>
-
+    <header>
+        <ul>
+        <li> <b>Главная</b></li>
+        <li> <a href = "education.html">Учеба</a></li>
+        <li> <a href = "work.html">Работа</a></li>
+    </ul>
+    </header> <hr />
+    <h1>Коротко обо мне</h1>
+    <div class="main">
+        <img src = "{% static 'img/avatar.png' %}" alt="Avatar">
+        <p>Я родилась 19.01.1989г. в г.Набережные Челны</p>
+        <p>Мои хобби: сноуборд, серфинг, лонгборд и другие активные виды спорта;<br>
+            я люблю путешествовать, увлекаюсь фотографией, танцами
+            и видео-монтажем.</p>
+        <p>Я долгое время работала QA и сейчас хочу сделать большой шаг в сторону автоматизированного тестирования.</p>
+    </div>
+    <footer>
+        <hr /> Copyright &copy; 2016 Все права защищены <a href = "https://geekbrains.ru/users/290693" target = "_blank">nassy</a>
+    </footer>
 </body>
 </html>

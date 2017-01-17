@@ -1,0 +1,48 @@
+{% load staticfiles %}
+header{
+    text-align: left;
+    text-decoration: none;
+    background-color: #A69C80;
+    height: 100px;
+    border-radius: 15px;
+    height: 75px;
+    margin: 5px;
+}
+header li {
+    padding-right: 25px;
+    color: grey;
+    list-style-type: none;
+}
+header li a{
+    color: black;
+}
+.main img {
+    border-radius: 15px;
+    float: right;
+}
+.main {
+    height: 270px;
+    margine: 50px 50px 50px 50px;
+    padding: 0 150px 0 150px;
+
+}
+footer {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background-color: #A69C80;
+    height: 50px;
+    border-radius: 15px;
+    font-size: 15px;
+    font-family: Verdana, sans-serif;
+    color: black;
+    font-weight: bold;
+    background-image:url(img/footer.jpg);
+}
+h1 {
+    text-align: center;
+    text-color: #031d42;
+}
+body {
+    background-color: 	#dbd9b7;
+}
