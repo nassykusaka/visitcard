@@ -21,6 +21,7 @@ from mainapp.views import index, work, edu
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', index),
     url(r'^index', index),
     url(r'^work',work),
     url(r'^education', edu),

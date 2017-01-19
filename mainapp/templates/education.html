@@ -1,31 +1,22 @@
+{% extends 'base.html' %}
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Education</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-</head>
-<body>
-    <header>
-        <ul>
-        <li> <a href="index.html">Главная</a></li>
-        <li> <b>Учеба</b></li>
-        <li> <a href="work.html">Работа</a></li>
-    </ul>
-    </header> <hr />
-    <h1>Образование</h1>
+
+{% block title %}
+    Education
+{% endblock %}
+{% block content %}
     <div class="main">
+        <h1>Образование</h1>
         <ul>
-            <li>2005 - 2010 Ярославский Государственный Университет им. П.Г.Демидова <br>
-                специальность Информатика в экономике</li>
-            <li>2014 ISTQB Foundation level </li>
-            <li>2016 - 2017 GeekBrains<br>
-                Специальность: программист Python</li>
+            {% if schools %}
+                {% for school in schools %}
+                    <li>{{ school.period }} <a target="blank" href="{{school.url}}">{{ school.name }}</a> <br>
+                        Специальность: {{ school.specialization }}
+                    </li>
+                {% endfor %}
+            {% else %}
+                Нет образования.
+            {% endif %}
         </ul>
     </div>
-    <footer>
-        <hr /> Copyright &copy; 2016 Все права защищены <a href = "https://geekbrains.ru/users/290693" target = "_blank">nassy</a>
-    </footer>
-</body>
-</html>
+{% endblock %}

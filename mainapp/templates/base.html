@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <ul>
+        <li> <a href="index.html">Главная</a></li>
+        <li> <a href = "education.html">Учеба</a></li>
+        <li> <a href = "work.html">Работа</a></li>
+    </ul>
+    </header> <hr />
+    <div class="main">
+        {% block content %}{% endblock %}
+    </div>
+    <footer>
+        <hr /> Copyright &copy; 2017 Все права защищены <a href = "https://geekbrains.ru/users/290693" target = "_blank">nassy</a>
+    </footer>
+</body>
+</html>
