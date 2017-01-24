@@ -10,7 +10,7 @@
         <ul>
             {% if works %}
                 {% for work in works %}
-                    <li>{{ work.period }} {{ work.organization }} <br>
+                    <li>{{ work.period }} <b>{{ work.organization }}</b> <br>
                         Должность: {{ work.position }} <br>
                         Основные обязанности: {{ work.responsibilities }}
                     </li>
