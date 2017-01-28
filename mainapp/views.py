@@ -35,9 +35,5 @@ def work(request):
     return render_to_response('work.html', {'works': works})
 
 def org(request, id):
-    '''try:
-        org = Organization.objects.get(id=id)
-    except ObjectDoesNotExist:
-        raise Http404'''
     org = get_object_or_404(Organization,id=id)
     return render_to_response('org.html', {'organization':org})
