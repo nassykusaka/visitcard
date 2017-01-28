@@ -15,7 +15,9 @@ header{
     background-image:url(img/header.jpg);
     height: 210px;
     width: 1275px;
-    border-radius: 10px;
+    //border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     margin: 0 auto;
     font-family: 'Comfortaa', cursive;}
 header li {
@@ -39,9 +41,11 @@ footer {
     margin: 0 auto;
     text-align: center;
     text-decoration: none;
-    height: 90px;
+    height: 50px;
     width: 1250px;
-    border-radius: 15px;
+    //border-radius: 15px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     font-size: 16px;
     color: black;
     font-weight: bold;
