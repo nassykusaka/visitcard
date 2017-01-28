@@ -15,14 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from mainapp.views import index, work, edu
-
-
+from mainapp.views import index, work, edu, org
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index),
     url(r'^index', index),
-    url(r'^work',work),
+    url(r'^work', work),
     url(r'^education', edu),
+    url(r'^organization/(\d+)/$', org, name='organization')
 ]

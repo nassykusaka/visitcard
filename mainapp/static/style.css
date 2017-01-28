@@ -1,55 +1,92 @@
 {% load staticfiles %}
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+body {
+    background-color: 	#dbd9b7;
+    margin: 0;
+    padding:0;}
 header{
+    margin-top:0;
     text-align: left;
     font-size: 24px;
     font-weight: 400;
     text-decoration: none;
-    background-color: #A69C80;
-    height: 40px;
+    background-image:url(img/header.jpg);
+    height: 210px;
+    width: 1275px;
     border-radius: 10px;
-}
+    margin: 0 auto;
+    font-family: 'Comfortaa', cursive;}
 header li {
+    padding-top: 10px;
     padding-right: 25px;
     color: grey;
     list-style-type: none;
-    float: left;
-}
+    float: left;}
 header a:hover{
-    color:darkblue;
-}
+    color:grey;}
 header li a{
     color: black;
-    text-decoration: none;
-}
-.main img {
-    border-radius: 65px;
-    float: right;
-    height: 150px;
-
-}
-.main {
-
-    margine: 50px 50px 50px 50px;
-    padding: 0 150px 0 150px;
-
-}
+    text-decoration: none;}
+h2 {
+    text-align: right;}
+a:hover {
+    color: grey;}
 footer {
+    font-family: 'Comfortaa', cursive;
+    clear:both;
+    margin: 0 auto;
     text-align: center;
     text-decoration: none;
-    color: black;
-    background-color: #A69C80;
-    height: 50px;
+    height: 90px;
+    width: 1250px;
     border-radius: 15px;
-    font-size: 15px;
-    font-family: Verdana, sans-serif;
+    font-size: 16px;
     color: black;
     font-weight: bold;
-    background-image:url(img/footer.jpg);
-}
+    background-image:url(img/footer.jpg);}
 h1 {
     text-align: center;
-    text-color: #031d42;
-}
+    text-color: #031d42;}
 body {
-    background-color: 	#dbd9b7;
+    background-color: 	#dbd9b7;}
+.write {
+    font-family: 'Indie Flower', cursive;}
+.write h1 {
+    //font-family: 'Comfortaa', cursive;
+    font-family: 'Lato', sans-serif;
 }
+li {
+    margin-bottom:10px;}
+li {
+    list-style-type: none;}
+h1 {
+    text-align: center;
+    text-color: #031d42;}
+
+#avatar {
+    box-shadow: 10px 10px 31px -2px rgba(0,0,0,0.75);
+    border-radius: 90px;
+    float: left;
+    margin-right: 15px;
+    margin-left: 15px;
+    height: 190px;}
+.main {
+    margin: 0 auto;
+    width: 900px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
+    //background-color: #c5c3a4;
+    margin-top: -20px;
+    padding-bottom: 15px;
+    padding-left:15px;}
+.social_menu {
+    //border: 1px solid grey;
+    height: 45px;}
+.social_menu img {
+    float: right;
+    border-radius:5px;
+    height: 35px;
+    box-shadow: 10px 10px 31px -2px rgba(0,0,0,0.75);
+    margin-right:15px;}

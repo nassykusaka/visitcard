@@ -1,22 +1,26 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-
 {% block title %}
     Work
 {% endblock %}
 {% block content %}
     <div class="main">
-        <h1>Опыт работы</h1>
+        <h1>Work experience</h1>
         <ul>
             {% if works %}
                 {% for work in works %}
-                    <li>{{ work.period }} <b>{{ work.organization }}</b> <br>
-                        Должность: {{ work.position }} <br>
-                        Основные обязанности: {{ work.responsibilities }}
+                     <li>
+                         <a href="{% url 'organization' work.organization.pk %}">
+                             {{ work.organization.name }}
+                         </a>
+                         <br>
+                         since {{ work.sdate }} to {{ work.ldate }}<br>
+                        <b>Position:</b> {{ work.position }} <br>
+                        <b>Main responsibilities:</b> {{ work.responsibilities }}
                     </li>
                 {% endfor %}
             {% else %}
-                Нет опыта работы.
+                Have no work experience.
             {% endif %}
         </ul>
     </div>

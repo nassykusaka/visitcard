@@ -1,20 +1,27 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-
 {% block title %}
     About me
 {% endblock %}
 {% block content %}
     <div class="main">
-        <h1>About me</h1>
-        <h2>{{first_name}} {{last_name}}</h2>
-        <img src = "{% static 'img/avatar.png' %}" alt="Avatar">
-        <p>Я родилась {{birth}}г. в г.{{place_of_birth}}.</p>
-        <p>Мои хобби:<br>
-            {% for hobbie in hobbies %}
-                {{ hobbie }},
-            {% endfor %} etc.
-        </p>
-        <p>Я долгое время работала QA и сейчас хочу сделать большой шаг в сторону автоматизированного тестирования.</p>
+        <div class="write">
+            <h1>{{first_name}} {{last_name}}</h1>
+            <img id ='avatar' src = "{% static 'img/avatar.png' %}" alt="Avatar">
+            <p>I am from Saint Petersburg (Russia).</p>
+            <p>I was born in {{birth}} in {{place_of_birth}} city.</p>
+            <p>I love mountains and ocean. My hobbies:
+                {% for hobbie in hobbies %}
+                    {{ hobbie.name }} (since {{ hobbie.year }}),
+                {% endfor %} etc.
+            </p>
+            <p>I used to work as QA for a long time. Now I am learning Python and want to do big step in my career.</p>
+        </div>
+        <div class='social_menu'>
+            <a href='https://github.com/nassykusaka' target="_blank"><img src="{% static 'img/git.jpg' %}"></a>
+            <a href='https://www.linkedin.com/in/anastasiya-chernyshova-12997742' target="_blank"><img src="{% static 'img/li.png' %}"></a>
+            <a href='https://www.facebook.com/stasya.chernyshova' target="_blank"><img src="{% static 'img/fb-art.png' %}"> </a>
+            <a href='https://www.hackerrank.com/stasya_aska' target = "_blank"><img src="{% static 'img/hackerrank.png' %}"> </a>
+        </div>
     </div>
 {% endblock %}
