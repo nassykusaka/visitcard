@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}
+    {{organization.name}}
+{% endblock %}
+{% block content %}
+    <div class="main">
+        {% if organization %}
+            <h1>{{ organization.name }}</h1>
+            <b>Area:</b> {{ organization.area }} <br>
+            <b>Region:</b> {{ organization.region }} <br>
+            <b>Phone number:</b> {{ organization.phone_number }}<br>
+            <b>Adress:</b> {{ organization.adress }}
+        {% else %}
+            Have no work experience.
+        {% endif %}
+    </div>
+{% endblock %}

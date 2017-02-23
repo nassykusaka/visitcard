@@ -1,0 +1,56 @@
+[
+  {
+    "model":"visitcard.Education",
+    "pk":1,
+    "fields": {
+      "organization": "test",
+      "position": "master",
+      "period": "2016 - 2017",
+      "responsibilities":"rest"}
+    },
+    {
+    "model":"visitcard.Education",
+    "pk":1,
+    "fields": {
+      "organization": "NET ZONE",
+      "position": "Администратор интернет кафе",
+      "period": "09.2008 - 04.2009",
+      "responsibilities":"продажа и предоставление доступа в интернет для клиентов, помощь по всем вопросам"}
+    },
+      {
+    "model":"visitcard.Education",
+    "pk":1,
+    "fields": {
+      "organization": "Sunny bright",
+      "position": "тестировщик",
+      "period": "06.2010 - 11.2010",
+      "responsibilities":"Тестирование системы документообота для сетей отелей на базе продуктов Rational IBM"}
+    },
+  {
+    "model":"visitcard.Education",
+    "pk":1,
+    "fields": {
+      "organization": "MultiTop",
+      "position": "тестировщик",
+      "period": "12.2010 - 11.2011",
+      "responsibilities":"Тестирование веб-портала с мультимедийным контентом, системой патентования,биллинговой системой"}
+    },
+  {
+    "model":"visitcard.Education",
+    "pk":1,
+    "fields": {
+      "organization": "Скайрос технологии",
+      "position": "инженер по тестированию",
+      "period": "11.2011 - 01.2012",
+      "responsibilities":"Тестирование требований, систем видеонаблюдения,плат видео захвата, подготовка и сборка стендов, работа с hardware, постановка и анализ результатов нагрузочных тестов"}
+    },
+  {
+    "model":"visitcard.Education",
+    "pk":1,
+    "fields": {
+      "organization": "Lesta llc",
+      "position": "Руководитель группы тестирования контента и внутреннего инструментария",
+      "period": "02.2012 - 09.2016",
+      "responsibilities":"Организация процесса тестирования игровой функциональности (постановка цели, контроль качества выполнения, отчетность), создание, ревью и поддержка тестовой документации,участие в планировании разработки"}
+    }
+]

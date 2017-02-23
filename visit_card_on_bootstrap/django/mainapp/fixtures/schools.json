@@ -1,0 +1,52 @@
+[
+  {
+    "model":"visitcard.Education",
+    "pk":1,
+    "fields":{
+      "period":"2005 - 2010",
+      "name":"P.G. Demidov Yaroslavl State University",
+      "specialization":"Information technology in economic" ,
+      "url":"http://www.uniyar.ac.ru/"
+    }
+  },
+  {
+    "model":"visitcard.Education",
+    "pk":2,
+    "fields":{
+      "period":"2014",
+      "name":"ISTQB",
+      "specialization":"Foundation level" ,
+      "url":"http://www.istqb.org/"
+    }
+  },
+  {
+    "model":"visitcard.Education",
+    "pk":3,
+    "fields":{
+      "period":"12.2016-01.2017",
+      "name":"Code school",
+      "specialization":"Django" ,
+      "url":"https://geekbrains.ru/"
+    }
+  },
+  {
+    "model":"visitcard.Education",
+    "pk":4,
+    "fields":{
+      "period":"2016-2017",
+      "name":"GeekBrains",
+      "specialization":"Programmer Python" ,
+      "url":"http://127.0.0.1:8000/www.codeschool.com"
+    }
+  },
+  {
+    "model":"visitcard.Education",
+    "pk":5,
+    "fields":{
+      "period":"2000",
+      "name":"test",
+      "specialization":"test" ,
+      "url":"www.google.com"
+    }
+  }
+]

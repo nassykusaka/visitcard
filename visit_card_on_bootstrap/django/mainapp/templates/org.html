@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}
+    {{organization.name}}
+{% endblock %}
+{% block content %}
+<header class="intro">
+    <br><br><br><br><br>
+    <div class="container text-left">
+        {% if organization %}
+            <h1>{{ organization.name }}</h1>
+            <b>Area:</b> {{ organization.area }} <br>
+            <b>Region:</b> {{ organization.region }} <br>
+            {% if organization.phone_number %}
+            <b>Phone number:</b> {{ organization.phone_number }}<br>
+            {% endif %}
+            {% if organization.adress %}
+            <b>Adress:</b> {{ organization.adress }}
+            {% endif %}
+        {% else %}
+            Have no work experience.
+        {% endif %}
+    </div>
+    <div class="container text-left">
+        <br><br>
+        <h5>Work experience description </h5>
+        {% for work in works %}
+        {% if work.organization.pk == organization.id %}
+            Since {{ work.sdate }} to {{ work.ldate }}<br>
+            {% if work.project %}
+            <a href="{{ work.url_project }}">Project: {{ work.project }}</a><br>
+            {% endif %}
+            <b>Position:</b> {{ work.position }} <br>
+            <b>Main responsibilities:</b> {{ work.responsibilities }}
+        {% endif %}
+        {% endfor %}
+    </div>
+    </header>
+{% endblock %}

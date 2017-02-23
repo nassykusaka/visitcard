@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}
+    Visit card
+{% endblock %}
+{% block content %}
+        <header class="intro">
+           <br><br><br><br><br>
+            <div class="container text-center">
+                <img id ='avatar' src = "{% static 'img/avatar.png' %}" alt="Avatar">
+            <h1>{{first_name}} {{last_name}}</h1>
+
+            <p>I am from Saint Petersburg (Russia).<br>
+            I was born in {{birth}} in {{place_of_birth}} city (Russia).<br>
+            I love nature, mountains and ocean. </p>
+            <p>    My hobbies:<br>
+                {% for hobbie in hobbies %}
+                    {{ hobbie.name }} {% if hobbie.year %} (since {{ hobbie.year }}){% endif %},
+                {% endfor %} etc.
+            </p>
+            <p>I used to work as QA for a long time. Now I am learning Python and want to do big step in my career.</p>
+            <div class='social_menu'>
+                <a href='https://github.com/nassykusaka' target="_blank"><img src="{% static 'img/git.jpg' %}"></a>
+                <a href='https://www.linkedin.com/in/anastasiya-chernyshova-12997742' target="_blank"><img src="{% static 'img/li.png' %}"></a>
+                <a href='https://www.facebook.com/stasya.chernyshova' target="_blank"><img src="{% static 'img/fb-art.png' %}"> </a>
+                <a href='https://www.hackerrank.com/stasya_aska' target = "_blank"><img src="{% static 'img/hackerrank.png' %}"> </a>
+            </div>
+                <a href="#edu" class="btn btn-circle page-scroll">
+                    <i class="fa fa-angle-double-down animated"></i></a>
+            </div>
+    </header>
+
+    <!-- About Section -->
+    <section  class="container content-section text-left">
+        <div  class="row" >
+            <div class="vertical"> <h2>E<br>d<br>u<br>c<br>a<br>t<br>i<br>o<br>n</h2></div>
+            <div id="edu" class="col-lg-8 col-lg-offset-2"><br><br><br>
+                 <!--<h2>Education</h2>-->
+                <img id = 'edu_pict' src="{% static 'img/edu.jpg' %}">
+                    <p>
+                    <ul>{% if schools %}
+                    {% for school in schools %}
+                        <li>{{ school.sdate }} - {{ school.ldate }}<br> <a target="blank" href="{{school.url}}">{{ school.name }}</a> <br>
+                                {{ school.specialization }}
+                        </li>
+                    {% endfor %}
+                    {% else %}
+                        Have no education.
+                    {% endif %}
+                    </ul></p>
+              </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section  class="content-section text-left">
+        <div id="exp" class="download-section">
+            <div  class="container">
+                <div  class="vertical"> <h2>Work experience</h2>
+                    <img src="{%static 'img/exp.jpg'%}">
+                </div>
+                <div  class="col-lg-8 col-lg-offset-2">
+                    <ul>
+                    {% if works %}
+                        {% for work in works %}
+                             <li>
+                                 <a href="{% url 'organization' work.organization.pk %}">
+                                     {{ work.organization.name }}
+                                 </a>
+                                 <br>
+                                 since {{ work.sdate }} to {{ work.ldate }}<br>
+                                 {% if work.project %}
+                                        <a href="{{ work.url_project }}">Project: {{ work.project }}</a><br>
+                                 {% endif %}
+                                <b>Position:</b> {{ work.position }} <br>
+                                <b>Description:</b> {{ work.short_desc }} etc.
+                                 <a href="{% url 'organization' work.organization.pk %}">
+                                     Learn more..
+                                 </a>
+                            </li>
+                        {% endfor %}
+                    {% else %}
+                        Have no work experience.
+                    {% endif %}
+                </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="recommend" class="container content-section text-left">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <img id='rec_pict' src="{% static 'img/recommend.png' %}">
+                <h2>Recommendations:</h2>
+
+                <p>Wargaming Saint Petersburg<br>
+                <a href="https://www.linkedin.com/in/sergey-filippov-58b09656">Sergey Philippov</a> (Head of QA department)</p>
+                <p>Wargaming Saint Petersburg<br>
+                <a href="https://www.linkedin.com/in/aposazhennikova">Anna Posazhennikova</a> (HR director)</p><br><br><br><br><br><br><br><br><br><br><br><br >
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div id="skills">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Skills</h2>
+                <p>More than 5 years in Quality Assurance.<br>
+                    Wide experience of software development, software testing, quality assurance and its role in product development.<br>
+                    Good knowledge of principles and methods of software testing and quality.<br>
+                    Significant experience of using the Agile methodologies.<br>
+                    Experience with Python, Django, Selenium WebDriver;
+                    Team Leadership;Functional QA.</p>
+                    <h3>Technical environment:</h3>
+                    <p>Bug-tracking & Project Management tools: Jira, Redmine, Mantis, TFS, Rational ClearQuest, Rational RequisitePro, Microsoft Project<br>
+                    CI/CD: TestRail, Confluence, TeamCity<br>
+                    OS: Windows, Linux (base knowledge)<br>
+                    VCS: SVN, GIT<br>
+                    IDE: Bracket, PyCharm, Adobe Creative Cloud<br>
+                    Tools: Fiddler, Chrome Developer Tool, Vmware, Perforce<br>
+                    Programming Languages & frameworks: Python, Django, Selenium WebDriver (Python), HTML, CSS, XML, SQL</p>
+                </p>
+                </div>
+            </div>
+    </div>
+
+    <div id='links'>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+            <h2>Used</h2>
+            <p>
+                <ul>
+                <li>design bootstrap from <a href="https://blackrockdigital.github.io/startbootstrap-grayscale/">blackrockdigital.github.io</a></li>
+                <li>Django framework</li>
+                <li>SQLite (amount of tables)</li>
+            </ul>
+                <h2>TODO:</h2>
+                <ul>
+                    <li>SQLite -> MySQL</li>
+                    <li>Move responsibilities to DB from organization page</li>
+                    <li>Show them as a list</li>
+                    <li>add tests</li>
+                    <li>add video - interview with developers</li>
+                    <li>add - download recommendation.pdf</li>
+                </ul>
+            </p>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

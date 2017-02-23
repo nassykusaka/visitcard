@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}
+    Work
+{% endblock %}
+{% block content %}
+    <div class="main">
+        <h1>Work experience</h1>
+        {% block js %}
+            {{block.super}}
+                <script src="{% static 'js/last_work.js' %}"></script>
+            {% endblock %}
+
+        <div id="place_works">
+        <ul>
+            {% if works %}
+                {% for work in works %}
+                     <li>
+                         <a href="{% url 'organization' work.organization.pk %}">
+                             {{ work.organization.name }}
+                         </a>
+                         <br>
+                         since {{ work.sdate }} to {{ work.ldate }}<br>
+                        <b>Position:</b> {{ work.position }} <br>
+                        <b>Main responsibilities:</b> {{ work.responsibilities }}
+                    </li>
+                {% endfor %}
+            {% else %}
+                Have no work experience.
+            {% endif %}
+        </ul></div>
+    </div>
+{% endblock %}
