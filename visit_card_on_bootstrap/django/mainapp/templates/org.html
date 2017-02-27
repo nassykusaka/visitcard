@@ -15,7 +15,7 @@
             <b>Phone number:</b> {{ organization.phone_number }}<br>
             {% endif %}
             {% if organization.adress %}
-            <b>Adres:</b> {{ organization.adress }}
+            <b>Address:</b> {{ organization.adress }}
             {% endif %}
         {% else %}
             Have no work experience.
@@ -35,5 +35,6 @@
         {% endif %}
         {% endfor %}
     </div>
+    <br><a href="{% static 'Resume_Chernyshova_Anastasia.pdf'%}" download>Download Resume_Chernyshova_Anastasia.pdf</a>
     </header>
 {% endblock %}
