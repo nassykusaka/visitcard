@@ -33,7 +33,9 @@
                     <a href="{{ work.url_project }}">Project: {{ work.project }}</a><br>
                 {% endif %}
             <b>Position:</b> {{ work.position }} <br><br>
-            <b>Main responsibilities</b> <br><span class="console">{{ work.responsibilities }}</span>
+            <b>Main responsibilities</b>
+            <div class="jumbotron">
+             <br><span class="console">{{ work.responsibilities }}</span></div>
             {% endif %}
         {% endfor %}
         </div>

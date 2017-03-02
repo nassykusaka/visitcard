@@ -7,21 +7,23 @@
         <header class="intro">
            <br><br><br><br><br>
             <div class="container text-center">
-                <img class='img-circle' id ='avatar' src = "{% static 'img/avatar.png' %}" alt="Avatar">
-            <h1>{{first_name}} {{last_name}}</h1>
 
-            <p>I am from Saint-Petersburg, Russia.<br>
-            I was born on {{birth}}.<br>
-            Currently I am living in Union City, NJ.</p>
-            <p>
-                I love nature, mountains, and ocean, {% for hobbie in hobbies %}
-                    {{ hobbie.name }},
-                {% endfor %} and movie-making.
-            </p>
-            <p>I used to work as QA for a long time. Now I am learning Python and want to build my career.<br>
-            I am responsible and thoughtful person with strong leadership and proven problem solving skills.
-            I am highly focused on result. <br>I have high performance and good communication skills.<br>
-            <a href="{% static 'Resume_Chernyshova_Anastasia.pdf'%}" download>Download Resume_Chernyshova_Anastasia.pdf</a></p>
+                    <img class='img-circle' id ='avatar' src = "{% static 'img/avatar.png' %}" alt="Avatar">
+                    <h1>{{first_name}} {{last_name}}</h1>
+
+                    <p>I am from Saint-Petersburg, Russia.<br>
+                    I was born on {{birth}}.<br>
+                    Currently I am living in Union City, NJ.</p>
+
+                <p>
+                    I love nature, mountains, and ocean, {% for hobbie in hobbies %}
+                        {{ hobbie.name }},
+                    {% endfor %} and movie-making.
+                </p>
+                <p>I used to work as QA for a long time. Now I am learning Python and want to build my career.<br>
+                I am responsible and thoughtful person with strong leadership and proven problem solving skills.
+                I am highly focused on result. <br>I have high performance and good communication skills.<br>
+                <a href="{% static 'Resume_Chernyshova_Anastasia.pdf'%}" download>Download Resume_Chernyshova_Anastasia.pdf</a></p>
             <div class='social_menu'>
                 <a href='https://github.com/nassykusaka' target="_blank"><img src="{% static 'img/git.jpg' %}"></a>
                 <a href='https://www.linkedin.com/in/anastasiya-chernyshova-12997742' target="_blank"><img src="{% static 'img/li.png' %}"></a>
@@ -118,6 +120,7 @@
         <div  class="row">
             <div  class="col-lg-12">
                 <h2 id="skills">Skills</h2>
+                <div class="jumbotron">
                 <span class="console">More than 5 years in Quality Assurance.<br>
                     Wide experience in software development, software testing, quality assurance and its role in product development.<br>
                     Good knowledge of principles and methods of software testing and quality.<br>
@@ -133,7 +136,7 @@
                     <u>Tools</u>: Fiddler, Chrome Developer Tool, Vmware, Perforce<br>
                     <u>Programming Languages & frameworks</u>: Python, Django, Selenium WebDriver (Python), HTML, CSS, XML, SQL</span>
                 </p>
-                </div>
+                </div></div>
             </div>
     </section>
     <section  class="container content-section text-center">
@@ -150,13 +153,16 @@
     <section id="used" class="container content-section text-left">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-            <h2>Used</h2>
-            <p>
-                <ul>
-                <li>design bootstrap from <a href="https://blackrockdigital.github.io/startbootstrap-grayscale/">blackrockdigital.github.io</a></li>
-                <li>Django framework</li>
-                <li>SQLite</li>
-            </ul>
+                 <h2>Used</h2>
+                <div class="jumbotron">
+
+                    <p>
+                        <ul>
+                        <li>design bootstrap from <a href="https://blackrockdigital.github.io/startbootstrap-grayscale/">blackrockdigital.github.io</a></li>
+                        <li>Django framework</li>
+                        <li>SQLite</li>
+                    </ul>
+                    </div>
                <!-- <h2>TODO:</h2>
                 <ul>
                     <li>SQLite -> MySQL</li>
