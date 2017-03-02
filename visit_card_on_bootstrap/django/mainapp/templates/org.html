@@ -34,9 +34,6 @@
                 {% endif %}
             <b>Position:</b> {{ work.position }} <br><br>
             <b>Main responsibilities</b> <br><span class="console">{{ work.responsibilities }}</span>
-            Splited:<ul> {% for resp in work.respons %}
-        <li>resp</li>
-        </ul>
             {% endif %}
         {% endfor %}
         </div>
