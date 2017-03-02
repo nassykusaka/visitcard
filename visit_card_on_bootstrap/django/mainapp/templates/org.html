@@ -7,34 +7,41 @@
 <header class="intro">
     <br><br><br><br><br>
     <div class="container text-left">
-        {% if organization %}
-            <h1>{{ organization.name }}</h1>
-            <b>Area:</b> {{ organization.area }} <br>
-            <b>Region:</b> {{ organization.region }} <br>
-            {% if organization.phone_number %}
-            <b>Phone number:</b> {{ organization.phone_number }}<br>
+        <div class="row">
+            <div class="col-sm-4">
+                {% if organization %}
+                <h1>{{ organization.name }}</h1>
+                <b>Area:</b> {{ organization.area }} <br>
+                <b>Region:</b> {{ organization.region }} <br>
+                {% if organization.phone_number %}
+                <b>Phone number:</b> {{ organization.phone_number }}<br>
+                {% endif %}
+                {% if organization.adress %}
+                <b>Address:</b> {{ organization.adress }}
+                {% endif %}
+                {% else %}
+                    Have no work experience.
+                {% endif %}
+                <br><a href="{% static 'Resume_Chernyshova_Anastasia.pdf'%}" download>Download Resume_Chernyshova_Anastasia.pdf</a>
+            </div>
+        <div class="col-sm-8">
+            <h3>Work experience description </h3>
+            {% for work in works %}
+                {% if work.organization.pk == organization.id %}
+                    Since {{ work.sdate }} to {{ work.ldate }}<br>
+                    {% if work.project %}
+                    <a href="{{ work.url_project }}">Project: {{ work.project }}</a><br>
+                {% endif %}
+            <b>Position:</b> {{ work.position }} <br><br>
+            <b>Main responsibilities</b> <br><span class="console">{{ work.responsibilities }}</span>
+            Splited:<ul> {% for resp in work.respons %}
+        <li>resp</li>
+        </ul>
             {% endif %}
-            {% if organization.adress %}
-            <b>Address:</b> {{ organization.adress }}
-            {% endif %}
-        {% else %}
-            Have no work experience.
-        {% endif %}
-    </div>
-    <div class="container text-left">
-        <br><br>
-        <h5>Work experience description </h5>
-        {% for work in works %}
-        {% if work.organization.pk == organization.id %}
-            Since {{ work.sdate }} to {{ work.ldate }}<br>
-            {% if work.project %}
-            <a href="{{ work.url_project }}">Project: {{ work.project }}</a><br>
-            {% endif %}
-            <b>Position:</b> {{ work.position }} <br>
-            <b>Main responsibilities:</b> <span class="console">{{ work.responsibilities }}</span>
-        {% endif %}
         {% endfor %}
+        </div>
     </div>
-    <br><a href="{% static 'Resume_Chernyshova_Anastasia.pdf'%}" download>Download Resume_Chernyshova_Anastasia.pdf</a>
+    </div>
+
     </header>
 {% endblock %}
