@@ -64,17 +64,20 @@
     <section  class="content-section text-left">
         <div id="exp" class="download-section">
             <div  class="container">
+
                 <div  class="vertical"> <h2 class="media">Work experience</h2>
                     <img class="media" src="{%static 'img/exp.jpg'%}">
                 </div>
+
                 <div  class="col-lg-8 col-lg-offset-2">
+
                     <h3 class="show_media">Work experience</h3>
                     <ul>
                     {% if works %}
                         {% for work in works %}
                              <li>
                                  <a href="{% url 'organization' work.organization.pk %}">
-                                     <b>{{ work.organization.name }}</b>
+                                    <b>{{ work.organization.name }}</b>
                                  </a>
                                  <br>
                                  <sub>{{ work.sdate }} - {{ work.ldate }}</sub><br>
@@ -92,6 +95,20 @@
                         Have no work experience.
                     {% endif %}
                 </ul>
+                    <div class="progress">
+                  <div class="progress-bar progress-bar-success" role="progressbar" style="width:57%">
+                    Wargaming
+                  </div>
+                  <div class="progress-bar progress-bar-warning" role="progressbar" style="width:20%">
+                    Skyross
+                  </div>
+                  <div class="progress-bar progress-bar-danger" role="progressbar" style="width:15%">
+                    TopVoiting Technology
+                  </div>
+                    <div class="progress-bar progress-bar-danger" role="progressbar" style="width:8%">
+                    Sunny bright
+                  </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -102,7 +119,8 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <img id='rec_pict' src="{% static 'img/recommend.png' %}">
-                <h2 class="mono">References</h2>
+
+                <h2 class="mono"> <i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>References</h2>
 
                 <p>Wargaming Saint-Petersburg<br>
                 <a href="https://www.linkedin.com/in/sergey-filippov-58b09656">Sergey Philippov</a> (Head of QA department)<br>
@@ -146,7 +164,10 @@
             <iframe class='utub' width="560" height="315" src="https://www.youtube.com/embed/1Vu8-xif0q0?t=2m3s" frameborder="0" allowfullscreen></iframe>
             <iframe class='utub' width="560" height="315" src="https://www.youtube.com/embed/ghn6x-lL7Ao" frameborder="0" allowfullscreen></iframe>
             <p><a href="{% static 'Resume_Chernyshova_Anastasia.pdf'%}" download>Download Resume_Chernyshova_Anastasia.pdf</a><br>
-            <a href="{% static 'Letter of recommendation for Anastasiya Chernyshova Eng.pdf'%}" download>Download Letter of recommendation for Anastasia.pdf</a><br><br></p>
+
+                <a href="{% static 'Letter of recommendation for Anastasiya Chernyshova Eng.pdf'%}" download>Download Letter of recommendation for Anastasia.pdf</a><br><br></p>
+            </div>
+
     </div></div>
     </section>
 
@@ -156,7 +177,7 @@
                  <h2>Used</h2>
                 <div class="jumbotron">
 
-                    <p>
+                    <p class="color">
                         <ul>
                         <li>design bootstrap from <a href="https://blackrockdigital.github.io/startbootstrap-grayscale/">blackrockdigital.github.io</a></li>
                         <li>Django framework</li>

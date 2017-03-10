@@ -17,12 +17,12 @@
                 <b>Phone number:</b> {{ organization.phone_number }}<br>
                 {% endif %}
                 {% if organization.adress %}
-                <b>Address:</b> {{ organization.adress }}
+                <span class="glyphicon glyphicon-envelope"></span> <b>Address:</b> {{ organization.adress }}<br>
                 {% endif %}
                 {% else %}
                     Have no work experience.
                 {% endif %}
-                <br><a href="{% static 'Resume_Chernyshova_Anastasia.pdf'%}" download>Download Resume_Chernyshova_Anastasia.pdf</a>
+                <span class="glyphicon glyphicon-print"></span> <a href="{% static 'Resume_Chernyshova_Anastasia.pdf'%}" download>Download Resume_Chernyshova_Anastasia.pdf</a>
             </div>
         <div class="col-sm-8">
             <h3>Work experience description </h3>
