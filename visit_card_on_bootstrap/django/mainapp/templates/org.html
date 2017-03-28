@@ -20,27 +20,28 @@
                 <span class="glyphicon glyphicon-envelope"></span> <b>Address:</b> {{ organization.adress }}<br>
                 {% endif %}
                 {% else %}
-                    Have no work experience.
+                Have no work experience.
                 {% endif %}
-                <span class="glyphicon glyphicon-print"></span> <a href="{% static 'Resume_Chernyshova_Anastasia.pdf'%}" download>Download Resume_Chernyshova_Anastasia.pdf</a>
+                <span class="glyphicon glyphicon-print"></span> <a href="{% static 'Resume_Chernyshova_Anastasia.pdf'%}"
+                                                                   download>Download
+                Resume_Chernyshova_Anastasia.pdf</a>
             </div>
-        <div class="col-sm-8">
-            <h3>Work experience description </h3>
-            {% for work in works %}
+            <div class="col-sm-8">
+                <h3>Work experience description </h3>
+                {% for work in works %}
                 {% if work.organization.pk == organization.id %}
-                    Since {{ work.sdate }} to {{ work.ldate }}<br>
-                    {% if work.project %}
-                    <a href="{{ work.url_project }}">Project: {{ work.project }}</a><br>
+                Since {{ work.sdate }} to {{ work.ldate }}<br>
+                {% if work.project %}
+                <a href="{{ work.url_project }}">Project: {{ work.project }}</a><br>
                 {% endif %}
-            <b>Position:</b> {{ work.position }} <br><br>
-            <b>Main responsibilities</b>
-            <div class="jumbotron">
-             <br><span class="console">{{ work.responsibilities }}</span></div>
-            {% endif %}
-        {% endfor %}
+                <b>Position:</b> {{ work.position }} <br><br>
+                <b>Main responsibilities</b>
+                <div class="jumbotron">
+                    <br><span class="console">{{ work.responsibilities }}</span></div>
+                {% endif %}
+                {% endfor %}
+            </div>
         </div>
     </div>
-    </div>
-
-    </header>
+</header>
 {% endblock %}
