@@ -129,6 +129,143 @@
         </div>
     </div>
 </section>
+<section id="cert" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <h2> Certificates </h2>
+
+            <div class="w3-content w3-display-container">
+                <div class="w3-display-container mySlides">
+                    <img src="{% static 'img/certificates/istqb.png' %}" style="width:90%">
+                    <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                        <p>ISTQB, foundation level</p>
+                    </div>
+                </div>
+
+            <div class="w3-display-container mySlides">
+                <img src="{% static 'img/certificates/swt_web_testing.png' %}" style="width:90%">
+                <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                    <p>software-testing.ru, Web-application testing</p>
+                </div>
+            </div>
+
+            <div class="w3-display-container mySlides">
+                <img src="{% static 'img/certificates/swt_mobile_testing.png' %}" style="width:90%">
+                <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                    <p>software-testing.ru, Mobile application testing</p>
+                </div>
+            </div>
+
+            <div class="w3-display-container mySlides">
+                <img src="{% static 'img/certificates/swt_selenium.png' %}" style="width:90%">
+                <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                    <p>software-testing.ru, Selenium web-driver</p>
+                </div>
+            </div>
+
+            <div class="w3-display-container mySlides">
+                <img src="{% static 'img/certificates/gb_django.png' %}" style="width:90%">
+                <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                    <p>geekbrains.ru, Django (Python web-framework)</p>
+                </div>
+            </div>
+
+            <div class="w3-display-container mySlides">
+                <img src="{% static 'img/certificates/gb_htmlcss.png' %}" style="width:90%">
+                <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                    <p>geekbrains.ru, HTML&CSS as base for web-site creation</p>
+                </div>
+            </div>
+
+            <div class="w3-display-container mySlides">
+                <img src="{% static 'img/certificates/gb_python1.png' %}" style="width:90%">
+                <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                    <p>geekbrains.ru, Python, level 1</p>
+                </div>
+            </div>
+
+            <div class="w3-display-container mySlides">
+                <img src="{% static 'img/certificates/gb_python2.png' %}" style="width:90%">
+                <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                    <p>geekbrains.ru, Python, level 2</p>
+                </div>
+            </div>
+
+            <div class="w3-display-container mySlides">
+                <img src="{% static 'img/certificates/gb_internship.png' %}" style="width:90%">
+                <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                    <p>geekbrains.ru, Internship</p>
+                </div>
+            </div>
+
+            <div class="w3-display-container mySlides">
+                <img src="{% static 'img/certificates/gb_htmlcss_test.png' %}" style="width:90%">
+                <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                    <p>geekbrains.ru, HTML&CSS base knowledge test</p>
+                </div>
+            </div>
+
+            <div class="w3-display-container mySlides">
+                <img src="{% static 'img/certificates/gb_python_test_midlevel.png' %}" style="width:90%">
+                <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                    <p>geekbrains.ru, Python middle level test</p>
+                </div>
+            </div>
+
+            <div class="w3-display-container mySlides">
+                <img src="{% static 'img/certificates/gb_base_programming_test.png' %}" style="width:90%">
+                <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                    <p>geekbrains.ru, base programming skills test</p>
+                </div>
+            </div>
+
+            <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+
+            <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+              for (i = 0; i < x.length; i++) {
+                 x[i].style.display = "none";
+              }
+              x[slideIndex-1].style.display = "block";
+            }
+            </script>
+
+            <script>
+                 var myIndex = 0;
+                 carousel();
+
+                 function carousel() {
+                     var i;
+                     var x = document.getElementsByClassName("mySlides");
+                     for (i = 0; i < x.length; i++) {
+                     x[i].style.display = "none";
+                     }
+                     myIndex++;
+                     if (myIndex > x.length) {myIndex = 1}
+                     x[myIndex-1].style.display = "block";
+                     setTimeout(carousel, 4000); // Change image every 4 seconds
+                 }
+            </script>
+
+        </div>
+    </div>
+    <br><hr>
+</section>
+
 <section class="container content-section text-left">
     <div class="row">
         <div class="col-lg-12">
