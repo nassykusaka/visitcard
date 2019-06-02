@@ -20,7 +20,12 @@
                              {{ work.organization.name }}
                          </a>
                          <br>
-                         since {{ work.sdate }} to {{ work.ldate}}
+                         since {{ work.sdate }} to
+                         {% if work.ldate==None %}
+                            Now
+                         {% else %}
+                            {{ work.ldate }}
+                         {% endif %}
                          <br>
                         <b>Position:</b> {{ work.position }}
                          <br>

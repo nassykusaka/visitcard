@@ -30,7 +30,13 @@
                 <h3>Work experience description </h3>
                 {% for work in works %}
                 {% if work.organization.pk == organization.id %}
-                Since {{ work.sdate }} to {{ work.ldate }}<br>
+                Since {{ work.sdate }} to
+                {% if work.ldate %}
+                    {{ work.ldate }}
+                {% else %}
+                    Now
+                {% endif %}
+                <br>
                 {% if work.project %}
                 <a href="{{ work.url_project }}">Project: {{ work.project }}</a><br>
                 {% endif %}
