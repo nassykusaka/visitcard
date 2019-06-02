@@ -5,9 +5,6 @@ from .models import Hobbies
 from .models import Education
 from .models import Organization
 import datetime
-from django.contrib.auth.models import User
-from django.http import JsonResponse
-from django.core.exceptions import ObjectDoesNotExist
 
 
 def index(request):
@@ -18,9 +15,9 @@ def index(request):
     hobbies = Hobbies.objects.order_by('year')
     schools = Education.objects.order_by('ldate')
     works = Work.objects.order_by('ldate').reverse()
-    return render_to_response("index.html", {'hobbies':hobbies, 'first_name':first_name,
-                                             'last_name':last_name, 'birth':birth, 'place_of_birth': place_of_birth,
-                                             'schools': schools,'works': works})
+    return render_to_response("index.html", {'hobbies': hobbies, 'first_name': first_name,
+                                             'last_name': last_name, 'birth': birth, 'place_of_birth': place_of_birth,
+                                             'schools': schools, 'works': works})
 
 
 def edu(request):
